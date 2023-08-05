@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <section>
+        <form id="form_nombre" action="#">
+            <label for="input_nombre">Ingresá tu nombre:</label>
+            <input type="text" id="input_nombre" placeholder="Nombre...">
+            <button>Ingresar</button>
+        </form>
+        <div id="container_principal" class="d-none">
+            <h1 id="nombre_principal"></h1>
+            <form id="container_task" action="#">
+                <input type="text" id="input_task" placeholder="Nueva tarea...">
+                <button id="btn_add_task">Agregar</button>
+            </form>
+            <h2>Cosas que hacer:</h2>
+            <ul id="list_container">
+            </ul>
+            <div id="popup"></div>
+        </div>
+    </section>
     <script src="js/main.js"></script>
 </body>
 </html>
