@@ -6,8 +6,8 @@ const popup = document.getElementById('popup');
 
 form_nombre.addEventListener('submit', function(e){
     e.preventDefault();
+    const input_nombre = document.getElementById('input_nombre');
     if(input_nombre.value != ""){
-        const input_nombre = document.getElementById('input_nombre');
         const nombre_principal = document.getElementById('nombre_principal');
         nombre_principal.innerHTML = `Hola! <span id="nombre">${input_nombre.value}</span>`;
         form_nombre.reset();
@@ -52,5 +52,3 @@ fondo_popup.addEventListener('click', function(e){
     fondo_popup.classList.toggle('d-none');
     popup.classList.toggle('d-none');
 });
-
-
