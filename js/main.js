@@ -22,7 +22,6 @@ container_task.addEventListener('submit', function(e){
     const input_task = document.getElementById('input_task').value;
     if(input_task != ""){
         const li = document.createElement('li');
-        li.classList.add('list-group-item');
         li.innerHTML = `
             <input type="checkbox">
             <p>${input_task}</p>
