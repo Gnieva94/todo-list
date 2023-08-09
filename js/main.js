@@ -1,5 +1,5 @@
 const form_nombre = document.getElementById('form_nombre');
-const container_task = document.getElementById('container_task');
+//const container_task = document.getElementById('container_task');
 const list_container = document.getElementById('list_container');
 const fondo_popup = document.getElementById('fondo_popup');
 const popup = document.getElementById('popup');
@@ -17,22 +17,23 @@ form_nombre.addEventListener('submit', function(e){
     }
 });
 
-container_task.addEventListener('submit', function(e){
-    e.preventDefault();
-    const input_task = document.getElementById('input_task').value;
-    if(input_task != ""){
-        const li = document.createElement('li');
-        li.innerHTML = `
-            <input type="checkbox">
-            <p>${input_task}</p>
-        `;
-        list_container.appendChild(li);
-        container_task.reset();
-    }
-});
+// container_task.addEventListener('submit', function(e){
+//     e.preventDefault();
+//     const input_task = document.getElementById('input_task').value;
+//     if(input_task != ""){
+//         const li = document.createElement('li');
+//         li.innerHTML = `
+//             <input type="checkbox">
+//             <p>${input_task}</p>
+//         `;
+//         list_container.appendChild(li);
+//         container_task.reset();
+//     }
+// });
 
 list_container.addEventListener('click', function(e){
     if(e.target.tagName === 'INPUT'){
+        console.log("aaaa")
         const nextSibling = e.target.nextElementSibling;
         nextSibling.classList.toggle('decoration_p');
         if(e.target.checked){
